@@ -17,6 +17,7 @@
 		74E297591C999AEC005EBB8D /* PapersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E297581C999AEC005EBB8D /* PapersDataSource.swift */; };
 		74E2975D1C99AFC5005EBB8D /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E2975C1C99AFC5005EBB8D /* MasterViewController.swift */; };
 		74E2975F1C99B858005EBB8D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E2975E1C99B858005EBB8D /* DetailViewController.swift */; };
+		74E297621C99C478005EBB8D /* PaperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E297611C99C478005EBB8D /* PaperCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		74E297581C999AEC005EBB8D /* PapersDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PapersDataSource.swift; sourceTree = "<group>"; };
 		74E2975C1C99AFC5005EBB8D /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		74E2975E1C99B858005EBB8D /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		74E297611C99C478005EBB8D /* PaperCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaperCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		74E2973E1C9995E3005EBB8D /* CollectionViewTest */ = {
 			isa = PBXGroup;
 			children = (
+				74E297601C99C45B005EBB8D /* Views */,
 				74E2975B1C99AFA6005EBB8D /* Controllers */,
 				74E2975A1C99AE0D005EBB8D /* Layout */,
 				74E297571C999AA4005EBB8D /* Data Sources */,
@@ -117,6 +120,14 @@
 				74E2975E1C99B858005EBB8D /* DetailViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		74E297601C99C45B005EBB8D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				74E297611C99C478005EBB8D /* PaperCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +208,7 @@
 				74E2975F1C99B858005EBB8D /* DetailViewController.swift in Sources */,
 				74E297561C9999DD005EBB8D /* Paper.swift in Sources */,
 				74E297591C999AEC005EBB8D /* PapersDataSource.swift in Sources */,
+				74E297621C99C478005EBB8D /* PaperCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +356,7 @@
 				74E297501C9995E3005EBB8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -46,26 +46,32 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PaperCell" id="2fG-iQ-4gg">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PaperCell" id="2fG-iQ-4gg" customClass="PaperCell" customModule="CollectionViewTest" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lr0-iQ-tHz">
-                                            <rect key="frame" x="8" y="8" width="192" height="192"/>
-                                            <color key="backgroundColor" red="1" green="0.43938522890780662" blue="0.36106229727871109" alpha="1" colorSpace="calibratedRGB"/>
-                                        </view>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PPY-BW-M89">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="Lr0-iQ-tHz" firstAttribute="top" secondItem="2fG-iQ-4gg" secondAttribute="top" constant="2" id="MWr-pk-C1K"/>
-                                    <constraint firstAttribute="trailing" secondItem="Lr0-iQ-tHz" secondAttribute="trailing" constant="2" id="OQe-Z6-BcL"/>
-                                    <constraint firstAttribute="bottom" secondItem="Lr0-iQ-tHz" secondAttribute="bottom" constant="2" id="lPo-HE-Q72"/>
-                                    <constraint firstItem="Lr0-iQ-tHz" firstAttribute="leading" secondItem="2fG-iQ-4gg" secondAttribute="leading" constant="2" id="swV-iI-Tkf"/>
+                                    <constraint firstItem="PPY-BW-M89" firstAttribute="top" secondItem="2fG-iQ-4gg" secondAttribute="top" id="27b-Jj-iMk"/>
+                                    <constraint firstAttribute="bottom" secondItem="PPY-BW-M89" secondAttribute="bottom" id="3a4-rv-qFZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="PPY-BW-M89" secondAttribute="trailing" id="81a-Um-geR"/>
+                                    <constraint firstItem="PPY-BW-M89" firstAttribute="leading" secondItem="2fG-iQ-4gg" secondAttribute="leading" id="Bcy-y0-C7J"/>
+                                    <constraint firstAttribute="trailing" secondItem="PPY-BW-M89" secondAttribute="trailing" id="CMn-Jt-5Zx"/>
+                                    <constraint firstItem="PPY-BW-M89" firstAttribute="top" secondItem="2fG-iQ-4gg" secondAttribute="top" id="aR0-Je-ai5"/>
+                                    <constraint firstItem="PPY-BW-M89" firstAttribute="leading" secondItem="2fG-iQ-4gg" secondAttribute="leading" id="kvt-Bz-vd7"/>
+                                    <constraint firstAttribute="bottom" secondItem="PPY-BW-M89" secondAttribute="bottom" id="x99-X8-B8K"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="paperImageView" destination="PPY-BW-M89" id="N98-ki-PCM"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
