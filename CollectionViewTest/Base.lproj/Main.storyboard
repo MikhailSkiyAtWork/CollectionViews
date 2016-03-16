@@ -66,9 +66,6 @@
                                     <constraint firstAttribute="bottom" secondItem="Lr0-iQ-tHz" secondAttribute="bottom" constant="2" id="lPo-HE-Q72"/>
                                     <constraint firstItem="Lr0-iQ-tHz" firstAttribute="leading" secondItem="2fG-iQ-4gg" secondAttribute="leading" constant="2" id="swV-iI-Tkf"/>
                                 </constraints>
-                                <connections>
-                                    <segue destination="2UF-h2-xJf" kind="show" identifier="MasterToDetail" id="0Ay-RT-Fnb"/>
-                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -77,6 +74,9 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="0eX-vt-uku"/>
+                    <connections>
+                        <segue destination="2UF-h2-xJf" kind="show" identifier="MasterToDetail" id="C5L-6B-fKw"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bEe-8h-qSM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -24,12 +24,10 @@ class MasterViewController : UICollectionViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "MasterToDetail" {
-            if let indexPath = collectionView!.indexPathsForSelectedItems()!.first! as? NSIndexPath {
-                if let paper = papersDataSource.paperForItemAtIndexPath(indexPath){
-                    let detailViewController = segue.destinationViewController as! DetailViewController
-                    detailViewController.paper = paper
-                }
-            }
+             let detailViewController = segue.destinationViewController
+                as! DetailViewController
+            detailViewController.paper = sender as? Paper
+            
         }
     }
     
@@ -46,6 +44,12 @@ class MasterViewController : UICollectionViewController {
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath)->UICollectionViewCell{
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PaperCell", forIndexPath: indexPath) as UICollectionViewCell
         return cell
+    }
+    
+    override func collectionView(collectionView: UICollectionView,didSelectItemAtIndexPath indexPath: NSIndexPath){
+        if let paper = papersDataSource.paperForItemAtIndexPath(indexPath){
+            performSegueWithIdentifier("MasterToDetail", sender: paper)
+        }
     }
     
     
