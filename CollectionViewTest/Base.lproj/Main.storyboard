@@ -39,7 +39,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.91907346140899193" green="1" blue="0.95709951299731533" alpha="1" colorSpace="calibratedRGB"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="bGj-bC-2mG">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="bGj-bC-2mG" customClass="PapersFlowLayout" customModule="CollectionViewTest" customModuleProvider="target">
                             <size key="itemSize" width="200" height="200"/>
                             <size key="headerReferenceSize" width="50" height="50"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -133,7 +133,13 @@
                             <outlet property="delegate" destination="t2T-JS-5iZ" id="LBA-Rm-8a0"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="0eX-vt-uku"/>
+                    <navigationItem key="navigationItem" id="0eX-vt-uku">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5O9-fx-gdB">
+                            <connections>
+                                <action selector="addBtnTapped:" destination="t2T-JS-5iZ" id="eNE-k8-9iG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="2UF-h2-xJf" kind="show" identifier="MasterToDetail" id="C5L-6B-fKw"/>
                     </connections>

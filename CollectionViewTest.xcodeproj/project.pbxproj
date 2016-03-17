@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7454FFEE1C9A9BC60013BB4E /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7454FFED1C9A9BC60013BB4E /* GradientView.swift */; };
 		7454FFF01C9AC74F0013BB4E /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7454FFEF1C9AC74F0013BB4E /* SectionHeaderView.swift */; };
+		7454FFF21C9AF6FE0013BB4E /* PapersFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7454FFF11C9AF6FE0013BB4E /* PapersFlowLayout.swift */; };
 		74E297401C9995E3005EBB8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E2973F1C9995E3005EBB8D /* AppDelegate.swift */; };
 		74E297421C9995E3005EBB8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E297411C9995E3005EBB8D /* ViewController.swift */; };
 		74E297451C9995E3005EBB8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74E297431C9995E3005EBB8D /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		7454FFED1C9A9BC60013BB4E /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		7454FFEF1C9AC74F0013BB4E /* SectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		7454FFF11C9AF6FE0013BB4E /* PapersFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PapersFlowLayout.swift; sourceTree = "<group>"; };
 		74E2973C1C9995E2005EBB8D /* CollectionViewTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74E2973F1C9995E3005EBB8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74E297411C9995E3005EBB8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			children = (
 				74E297431C9995E3005EBB8D /* Main.storyboard */,
 				74E297481C9995E3005EBB8D /* LaunchScreen.storyboard */,
+				7454FFF11C9AF6FE0013BB4E /* PapersFlowLayout.swift */,
 			);
 			name = Layout;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			files = (
 				74E2975D1C99AFC5005EBB8D /* MasterViewController.swift in Sources */,
 				74E297421C9995E3005EBB8D /* ViewController.swift in Sources */,
+				7454FFF21C9AF6FE0013BB4E /* PapersFlowLayout.swift in Sources */,
 				74E297401C9995E3005EBB8D /* AppDelegate.swift in Sources */,
 				74E2975F1C99B858005EBB8D /* DetailViewController.swift in Sources */,
 				7454FFF01C9AC74F0013BB4E /* SectionHeaderView.swift in Sources */,

@@ -43,6 +43,19 @@ class MasterViewController : UICollectionViewController {
         
     }
     
+    @IBAction func addBtnTapped(sender: UIBarButtonItem) {
+        
+        let indexPath = papersDataSource.indexPathForNewRandomPaper()
+        
+        let layout = collectionViewLayout as! PapersFlowLayout
+        layout.appearingIndexPath = indexPath
+        
+        UIView.animateWithDuration(1.0,delay:0,usingSpringWithDamping:0.65,initialSpringVelocity:0.0,options:.CurveEaseInOut, animations: {()->Void in
+            self.collectionView!.insertItemsAtIndexPaths([indexPath])
+            },completion: {(finished:Bool)->Void in layout.appearingIndexPath = nil})
+    }
+    
+    
     // MARK: UICollectionViewDataSource
     
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
