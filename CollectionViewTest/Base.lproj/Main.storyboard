@@ -41,13 +41,13 @@
                         <color key="backgroundColor" red="0.91907346140899193" green="1" blue="0.95709951299731533" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="bGj-bC-2mG">
                             <size key="itemSize" width="200" height="200"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PaperCell" id="2fG-iQ-4gg" customClass="PaperCell" customModule="CollectionViewTest" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="200" height="200"/>
+                                <rect key="frame" x="0.0" y="114" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
@@ -97,6 +97,37 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SectionHeader" id="4kR-NP-KsV" customClass="SectionHeaderView" customModule="CollectionViewTest" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="64" width="600" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuT-hw-DFq">
+                                    <rect key="frame" x="56" y="8" width="536" height="34"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2s8-uv-0eS">
+                                    <rect key="frame" x="8" y="8" width="40" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="40" id="2Va-Zl-zyC"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="OuT-hw-DFq" secondAttribute="trailing" constant="8" id="5Qk-Lx-Rgf"/>
+                                <constraint firstAttribute="bottom" secondItem="OuT-hw-DFq" secondAttribute="bottom" constant="8" id="MdD-1S-hYe"/>
+                                <constraint firstItem="OuT-hw-DFq" firstAttribute="top" secondItem="4kR-NP-KsV" secondAttribute="top" constant="8" id="VeA-3H-xGc"/>
+                                <constraint firstItem="OuT-hw-DFq" firstAttribute="leading" secondItem="2s8-uv-0eS" secondAttribute="trailing" constant="8" id="c6R-b7-5nW"/>
+                                <constraint firstItem="2s8-uv-0eS" firstAttribute="leading" secondItem="4kR-NP-KsV" secondAttribute="leading" constant="8" id="iqM-hJ-4Nc"/>
+                                <constraint firstAttribute="bottom" secondItem="2s8-uv-0eS" secondAttribute="bottom" constant="8" id="jM8-Df-3fB"/>
+                                <constraint firstItem="2s8-uv-0eS" firstAttribute="top" secondItem="4kR-NP-KsV" secondAttribute="top" constant="8" id="zVe-d7-ZOa"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="iconImageView" destination="2s8-uv-0eS" id="cvf-Qd-wIH"/>
+                                <outlet property="titleLalbel" destination="OuT-hw-DFq" id="74v-ve-5rt"/>
+                            </connections>
+                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="t2T-JS-5iZ" id="p1w-io-EwW"/>
                             <outlet property="delegate" destination="t2T-JS-5iZ" id="LBA-Rm-8a0"/>
