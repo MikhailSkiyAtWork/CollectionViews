@@ -56,20 +56,43 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PPY-BW-M89">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                         </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PnY-LR-vST" customClass="GradientView" customModule="CollectionViewTest" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="170" width="200" height="30"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="f8z-AQ-A4B"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kK0-cL-hvb">
+                                            <rect key="frame" x="0.0" y="170" width="200" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="qm5-5Z-qbm"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
                                     <constraint firstItem="PPY-BW-M89" firstAttribute="top" secondItem="2fG-iQ-4gg" secondAttribute="top" id="27b-Jj-iMk"/>
+                                    <constraint firstAttribute="bottom" secondItem="PnY-LR-vST" secondAttribute="bottom" id="3KO-hs-oXI"/>
                                     <constraint firstAttribute="bottom" secondItem="PPY-BW-M89" secondAttribute="bottom" id="3a4-rv-qFZ"/>
                                     <constraint firstAttribute="trailing" secondItem="PPY-BW-M89" secondAttribute="trailing" id="81a-Um-geR"/>
+                                    <constraint firstAttribute="trailing" secondItem="PnY-LR-vST" secondAttribute="trailing" id="9gm-h1-eyO"/>
                                     <constraint firstItem="PPY-BW-M89" firstAttribute="leading" secondItem="2fG-iQ-4gg" secondAttribute="leading" id="Bcy-y0-C7J"/>
                                     <constraint firstAttribute="trailing" secondItem="PPY-BW-M89" secondAttribute="trailing" id="CMn-Jt-5Zx"/>
+                                    <constraint firstItem="PnY-LR-vST" firstAttribute="leading" secondItem="2fG-iQ-4gg" secondAttribute="leading" id="EX6-wP-U1L"/>
                                     <constraint firstItem="PPY-BW-M89" firstAttribute="top" secondItem="2fG-iQ-4gg" secondAttribute="top" id="aR0-Je-ai5"/>
+                                    <constraint firstItem="kK0-cL-hvb" firstAttribute="leading" secondItem="2fG-iQ-4gg" secondAttribute="leading" id="eKC-Gy-GVm"/>
+                                    <constraint firstAttribute="bottom" secondItem="kK0-cL-hvb" secondAttribute="bottom" id="jpO-wa-AIX"/>
                                     <constraint firstItem="PPY-BW-M89" firstAttribute="leading" secondItem="2fG-iQ-4gg" secondAttribute="leading" id="kvt-Bz-vd7"/>
+                                    <constraint firstAttribute="trailing" secondItem="kK0-cL-hvb" secondAttribute="trailing" id="qZc-fx-Myg"/>
                                     <constraint firstAttribute="bottom" secondItem="PPY-BW-M89" secondAttribute="bottom" id="x99-X8-B8K"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="captionLabel" destination="kK0-cL-hvb" id="TJo-w8-iU5"/>
                                     <outlet property="paperImageView" destination="PPY-BW-M89" id="N98-ki-PCM"/>
                                 </connections>
                             </collectionViewCell>
