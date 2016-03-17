@@ -10,12 +10,18 @@ import UIKit
 
 class MasterViewController : UICollectionViewController {
     
+    @IBOutlet weak var addButton: UIBarButtonItem!
     private var papersDataSource = PapersDataSource()
     
     // MARK: UIViewController
     
     override func viewDidLoad(){
         super.viewDidLoad()
+        
+        navigationController!.toolbarHidden = true
+        navigationItem.leftBarButtonItem = editButtonItem()
+        
+        
         
         let width = CGRectGetWidth(collectionView!.frame) / 3
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
@@ -30,6 +36,27 @@ class MasterViewController : UICollectionViewController {
             
         }
     }
+    
+    override func setEditing(editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        
+        addButton.enabled = !editing
+        collectionView!.allowsMultipleSelection = editing
+        let indexPaths = collectionView!.indexPathsForVisibleItems() as! [NSIndexPath]
+        for indexPath in indexPaths {
+            collectionView!.deselectItemAtIndexPath(indexPath, animated: false)
+            let cell = collectionView!.cellForItemAtIndexPath(indexPath) as! PaperCell
+            cell.editing = editing
+            
+        }
+        
+        if !editing{
+            navigationController!.setToolbarHidden(true, animated: animated)
+        }
+        
+    }
+    
+    // MARK: MasterViewController
     
     
     override func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath:NSIndexPath) -> UICollectionReusableView{
@@ -56,6 +83,13 @@ class MasterViewController : UICollectionViewController {
     }
     
     
+    @IBAction func deleteBtnTapped(sender: UIBarButtonItem) {
+        let indexPaths = collectionView!.indexPathsForSelectedItems()!
+        papersDataSource.deleteItemsAtIndexPaths(indexPaths)
+        collectionView!.deleteItemsAtIndexPaths(indexPaths)
+    }
+    
+    
     // MARK: UICollectionViewDataSource
     
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -71,14 +105,27 @@ class MasterViewController : UICollectionViewController {
         
         if let paper = papersDataSource.paperForItemAtIndexPath(indexPath){
             cell.paper = paper
+            cell.editing = editing
         }
         
         return cell
     }
     
     override func collectionView(collectionView: UICollectionView,didSelectItemAtIndexPath indexPath: NSIndexPath){
+        if !editing {
         if let paper = papersDataSource.paperForItemAtIndexPath(indexPath){
             performSegueWithIdentifier("MasterToDetail", sender: paper)
+        }
+        } else {
+            navigationController!.setToolbarHidden(false, animated: true)
+        }
+    }
+    
+    override func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath:NSIndexPath){
+        if editing {
+            if collectionView.indexPathsForSelectedItems()!.count == 0 {
+                navigationController!.setToolbarHidden(true, animated: true)
+            }
         }
     }
     
