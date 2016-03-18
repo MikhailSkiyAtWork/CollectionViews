@@ -86,7 +86,13 @@ class MasterViewController : UICollectionViewController {
     @IBAction func deleteBtnTapped(sender: UIBarButtonItem) {
         let indexPaths = collectionView!.indexPathsForSelectedItems()!
         papersDataSource.deleteItemsAtIndexPaths(indexPaths)
-        collectionView!.deleteItemsAtIndexPaths(indexPaths)
+        //collectionView!.deleteItemsAtIndexPaths(indexPaths)
+        
+        let layout = collectionViewLayout as! PapersFlowLayout
+        layout.disappearingItemsIndexPaths = indexPaths
+        
+        UIView.animateWithDuration(0.65, delay:0.0, options: .CurveEaseInOut, animations: {()-> Void in self.collectionView!.deleteItemsAtIndexPaths(indexPaths)} ) {(finished: Bool) -> Void in layout.disappearingItemsIndexPaths = nil
+        }
     }
     
     
